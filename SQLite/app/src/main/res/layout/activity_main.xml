@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/buttons"
+        android:gravity="bottom"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Contact"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/add"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Contact"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/show"
+            android:layout_below="@+id/add"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Count Contact"
+            android:layout_below="@+id/show"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/count"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/contact_form"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_msg"
+            android:layout_marginBottom="10dp"
+            android:text="Please Fill the form below"
+            android:textColor="#000"
+            android:textSize="15dp"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_name"
+            android:hint="Name:"
+            android:background="@null"
+            android:maxLength="30"
+            android:inputType="textPersonName"
+
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_number"
+            android:hint="Number:"
+            android:background="@null"
+            android:maxLength="10"
+            android:inputType="textPersonName"
+
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/submit"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/show_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Contacts"
+            android:textSize="30sp"
+            android:visibility="gone"
+
+            />
+
+        <ListView
+            android:id="@+id/list_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="320dp"
+            android:dividerHeight="1dp"
+            android:padding="10dp"></ListView>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
